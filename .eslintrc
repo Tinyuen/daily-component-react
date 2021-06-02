@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "extends": ["za/react", "za/typescript"],
+  "plugins": ["react-hooks"],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "no-console": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "max-len": ["off", {"code": 120}],
+    "quotes": ["error", "single"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "typescript/no-object-literal-type-assertion": "off",
+    "semi": ["error", "always"],
+    "no-shadow": ["error", { "allow": ["done"] }],
+    "no-var": "error",
+    "arrow-parens": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-wrap-multilines": "off",
+    "no-multiple-empty-lines": "off"
+  }
+}
