@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --config scripts/webpack/webpack.dev.config.js",
     "build:css": "",
     "build:es": "",
-    "build:lib": "",
+    "build:commonjs": "rimraf lib && babel src -d lib --extensions \".ts,.tsx\" --copy-files --no-babelrc --config-file scripts/babel/config.commonjs.js",
     "build:types": "",
     "build:umd": "rimraf dist && node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js && cross-env NODE_ENV=production node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js"
   },

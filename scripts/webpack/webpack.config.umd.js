@@ -3,7 +3,6 @@ const path = require('path');
 const moduleRules = require('./loaders');
 const plugins = require('./plugins');
 const nodeExternals = require('webpack-node-externals');
-const TerserPlugin = require('terser-webpack-plugin');
 const cwd = process.cwd();
 const env = process.env.NODE_ENV;
 const isProd = env === 'production';

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Demo } from '../../src/components/Demo';
+import { Demo } from '../../src/Demo';
 
 const App = () => {
   return (

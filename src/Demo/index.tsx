@@ -1,6 +1,10 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 
 export const Demo = () => {
+  const test = useCallback(() => {
+    const p = Promise.resolve('hahha');
+  }, []);
+
   useEffect(() => {
     console.log('init');
   }, []);
