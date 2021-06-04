@@ -1,7 +1,7 @@
 
 <p align="center">
-  <a href="http://zarm.design">
-    <img width="150" style="border-radius: 50%" src="https://cdn.jsdelivr.net/gh/Tinyuen/blogcdn@0.0.1/img/author-avatar-pet.jpeg">
+  <a href="">
+    <img width="150" style="margin-top: 30px;" src="https://cdn.jsdelivr.net/gh/Tinyuen/blogcdn@0.0.1/img/author-avatar-pet.jpeg">
   </a>
 </p>
 
