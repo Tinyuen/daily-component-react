@@ -86,5 +86,9 @@
     "webpack-dev-server": "3.5.1",
     "webpack-node-externals": "^3.0.0",
     "webpackbar": "^4.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   }
 }
