@@ -1,7 +1,13 @@
 {
   "name": "@tinyuen/ui",
+  "author": "tinyuen",
   "version": "0.0.1",
   "description": "daily react components",
+  "keywords": [
+    "react",
+    "component",
+    "ui"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --config scripts/webpack/webpack.dev.config.js",
@@ -11,15 +17,21 @@
     "build:commonjs": "babel src -d lib --extensions \".ts,.tsx\" --copy-files --no-babelrc --config-file ./scripts/babel/config.commonjs.js",
     "build:types": "",
     "build:umd": "node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js && cross-env NODE_ENV=production node_modules/.bin/webpack --config ./scripts/webpack/webpack.config.umd.js",
-    "build:all": "npm run clean && npm run build:umd && npm run build:commonjs && npm run build:es"
+    "build:all": "npm run clean && npm run build:umd && npm run build:commonjs && npm run build:es",
+    "pub": "npm publish --access public"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "types"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tinyuen/daily-component-react.git"
   },
-  "author": "tianxiaohu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tinyuen/daily-component-react/issues"
