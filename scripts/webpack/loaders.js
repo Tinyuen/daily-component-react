@@ -1,11 +1,5 @@
-const path = require('path');
-const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const cssHotLoader = 'css-hot-loader';
-const styleLoader = 'style-loader';
-const cssLoader = 'css-loader';
-const postcssLoader = 'postcss-loader';
 const sassLoader = {
   loader: 'sass-loader',
   options: {
@@ -19,28 +13,28 @@ const sassLoader = {
 
 const genCssLoaders = (isDev) => {
   return isDev ? [
-    cssHotLoader,
-    styleLoader,
-    cssLoader,
-    postcssLoader,
+    'css-hot-loader',
+    'style-loader',
+    'css-loader',
+    'postcss-loader',
   ] : [
     MiniCssExtractPlugin.loader,
-    cssLoader,
-    postcssLoader,
+    'css-loader',
+    'postcss-loader',
   ];
 };
 
 const genSassLoaders = (isDev) => {
   return isDev ? [
-    cssHotLoader,
-    styleLoader,
-    cssLoader,
-    postcssLoader,
+    'css-hot-loader',
+    'style-loader',
+    'css-loader',
+    'postcss-loader',
     sassLoader,
   ] : [
     MiniCssExtractPlugin.loader,
-    cssLoader,
-    postcssLoader,
+    'css-loader',
+    'postcss-loader',
     sassLoader,
   ];
 };

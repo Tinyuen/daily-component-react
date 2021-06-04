@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server --config scripts/webpack/webpack.dev.config.js",
+    "clean": "rimraf es lib dist",
     "build:css": "",
-    "build:es": "",
-    "build:commonjs": "rimraf lib && babel src -d lib --extensions \".ts,.tsx\" --copy-files --no-babelrc --config-file scripts/babel/config.commonjs.js",
+    "build:es": "babel src -d es --extensions \".ts,.tsx\" --copy-files --no-babelrc --config-file scripts/babel/config.esm.js",
+    "build:commonjs": "babel src -d lib --extensions \".ts,.tsx\" --copy-files --no-babelrc --config-file scripts/babel/config.commonjs.js",
     "build:types": "",
-    "build:umd": "rimraf dist && node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js && cross-env NODE_ENV=production node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js"
+    "build:umd": "node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js && cross-env NODE_ENV=production node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js",
+    "build:all": "npm run clean && npm run build:umd && npm run build:commonjs && npm run build:es"
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,13 @@
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.0",
+    "@babel/helper-plugin-utils": "^7.13.0",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@babel/runtime-corejs3": "7.11.1",
-    "@babel/helper-plugin-utils": "^7.13.0",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
@@ -63,7 +65,7 @@
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^4.2.3",
     "ts-loader": "^8.0.2",
-    "typescript": "^4.3.2",
+    "typescript": "^3.7.5",
     "url-loader": "^4.1.0",
     "webpack": "4.28.4",
     "webpack-cli": "3.3.2",

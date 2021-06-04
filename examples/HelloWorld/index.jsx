@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Demo } from '../../src/Demo';
+import { HelloWorld } from '../../src/HelloWorld';
+import '../../src/HelloWorld/style';
 
 const App = () => {
   return (
-    <Demo />
+    <HelloWorld name="Tinyuen" />
   );
 };
 

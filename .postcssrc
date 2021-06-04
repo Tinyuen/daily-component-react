@@ -1,0 +1,6 @@
+{
+  "minimize": true,
+  "plugins": {
+    "autoprefixer": {}
+  }
+}
