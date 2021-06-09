@@ -5,3 +5,4 @@ scripts/
 node_modules/
 types/
 postcss.config.js
+.postcssrc

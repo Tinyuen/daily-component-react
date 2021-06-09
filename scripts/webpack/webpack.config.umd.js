@@ -12,7 +12,7 @@ module.exports = () => {
     devtool: '#source-map',
     mode: "production",
     entry: {
-      "tinyuen-ui": path.resolve(cwd, 'src/index')
+      "tinyuen-ui": path.resolve(cwd, 'components/index')
     },
     output: {
       path: path.resolve(cwd, 'dist'),

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HelloWorld } from '../../src/HelloWorld';
-import '../../src/HelloWorld/style';
+import { HelloWorld } from '../../components/HelloWorld';
+import '../../components/HelloWorld/style';
 
 const App = () => {
   return (

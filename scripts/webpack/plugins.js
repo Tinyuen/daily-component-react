@@ -10,7 +10,7 @@ const hotModuleReplacePlugin = new webpack.HotModuleReplacementPlugin();
 const webpackBar = new WebpackBar({ color: '#ffac00'}); // 构建进度条美化
 const forkTsCheckPlugin = new ForkTsCheckerWebpackPlugin({
   eslint: {
-    files: './src/**/*.{ts,tsx,js,jsx}'
+    files: './components/**/*.{ts,tsx,js,jsx}'
   },
   typescript: {
     configFile: path.resolve(cwd, 'tsconfig.json')
