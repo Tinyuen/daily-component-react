@@ -1,7 +1,7 @@
 {
   "name": "@tinyuen/ui",
   "author": "tinyuen",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "daily react components",
   "keywords": [
     "react",
@@ -20,7 +20,7 @@
     "build:commonjs": "babel components -d lib --extensions \".ts,.tsx\" --copy-files --no-babelrc --config-file ./scripts/babel/config.commonjs.js",
     "build:types": "tsc --outDir types -d --emitDeclarationOnly",
     "build:umd": "node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js && cross-env NODE_ENV=production node_modules/.bin/webpack --config ./scripts/webpack/webpack.config.umd.js",
-    "build:all": "npm run clean && npm run build:umd && npm run build:commonjs && npm run build:es && npm run build:css",
+    "build:all": "npm run clean && npm run build:types && npm run build:umd && npm run build:commonjs && npm run build:es && npm run build:css",
     "pub": "npm publish --access public"
   },
   "main": "lib/index.js",
