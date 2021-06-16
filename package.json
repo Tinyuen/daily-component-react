@@ -21,7 +21,10 @@
     "build:types": "tsc --outDir types -d --emitDeclarationOnly",
     "build:umd": "node_modules/.bin/webpack --config scripts/webpack/webpack.config.umd.js && cross-env NODE_ENV=production node_modules/.bin/webpack --config ./scripts/webpack/webpack.config.umd.js",
     "build:all": "npm run clean && npm run build:types && npm run build:umd && npm run build:commonjs && npm run build:es && npm run build:css",
-    "pub": "npm publish --access public"
+    "pub:patch": "npm version patch && npm publish --access public",
+    "pub:minor": "npm version minor && npm publish --access public",
+    "pub:major": "npm version major && npm publish --access public",
+    "pub": "npm run pub:patch"
   },
   "main": "lib/index.js",
   "module": "es/index.js",
