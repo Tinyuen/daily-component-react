@@ -12,4 +12,5 @@ export const HelloWorld: FC<IHelloWorldProps> = ({ name }) => {
     );
   }, [name]);
 };
+
 export default HelloWorld;

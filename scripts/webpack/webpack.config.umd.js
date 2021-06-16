@@ -26,7 +26,7 @@ module.exports = () => {
       alias: {},
     },
     externals: [
-      Object.assign({ react: 'react', 'react-dom': 'react-dom'}, {}),
+      Object.assign({ react: 'react', 'react-dom': 'react-dom' }, {}),
       nodeExternals()
     ],
     // close optimization for Development
