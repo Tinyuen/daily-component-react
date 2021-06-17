@@ -1,15 +1,4 @@
 # support browsers
 
-> 1%
-ie >= 10
-Chrome >= 49
-Firefox >= 48
-Safari >= 9
-Edge >= 12
-last 3 and_qq versions
-last 3 and_uc versions
-not op_mini all
-and_chr >= 38
 android >= 4.2
 ios >= 8.0
-not dead
