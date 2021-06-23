@@ -68,7 +68,7 @@
     "css-loader": "^4.2.0",
     "cssnano": "^5.0.5",
     "eslint": "^7.16.0",
-    "eslint-config-za": "^2.2.2",
+    "eslint-config-tinyuen": "^1.0.2",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",

@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["za/typescript-react"],
+  "extends": ["tinyuen/typescript-react"],
   "plugins": ["react-hooks"],
   "rules": {
     "import/prefer-default-export": "off",
