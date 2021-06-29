@@ -1,0 +1,94 @@
+@keyframes ty-slideUp-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ty-slideUp-leave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes ty-slideDown-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ty-slideDown-leave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes ty-slideLeft-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ty-slideLeft-leave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ty-slideRight-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes ty-slideRight-leave {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+.ty-slideUp-enter {
+  animation: ty-slideUp-enter both ease-in;
+}
+.ty-slideUp-leave {
+  animation: ty-slideUp-leave both ease-out;
+}
+.ty-slideDown-enter {
+  animation: ty-slideDown-enter both ease-in;
+}
+.ty-slideDown-leave {
+  animation: ty-slideDown-leave both ease-out;
+}
+
+.ty-slideLeft-enter {
+  animation: ty-slideLeft-enter both ease-in;
+}
+.ty-slideLeft-leave {
+  animation: ty-slideLeft-leave both ease-out;
+}
+
+.ty-slideRight-enter {
+  animation: ty-slideRight-enter both ease-in;
+}
+.ty-slideRight-leave {
+  animation: ty-slideRight-leave both ease-out;
+}

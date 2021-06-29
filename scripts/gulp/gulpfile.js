@@ -12,21 +12,10 @@ const basePath = '../../';
 
 // sass file directory
 const sassDir = path.resolve(basePath, 'components/**/style/*.scss');
-const cssIndexDir = path.resolve(basePath, 'components/**/style/index.js');
+const cssIndexDir = path.resolve(basePath, 'components/**/style/index.ts');
 const libDir = path.resolve(basePath, 'lib');
 const esDir = path.resolve(basePath, 'es');
 const distDir = path.resolve(basePath, 'dist');
-
-
-// copy scss files to directory lib and es
-gulp.task('copy-sass', () => {
-  return gulp
-    .src(sassDir)
-    .pipe(sourceMap.init())
-    .pipe(sourceMap.write('.'))
-    .pipe(gulp.dest(libDir))
-    .pipe(gulp.dest(esDir));
-});
 
 // generate css.js
 gulp.task('replace-index-js', () => {

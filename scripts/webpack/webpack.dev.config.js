@@ -10,7 +10,7 @@ module.exports = () => {
     devtool: 'cheap-module-eval-source-map',
     mode: "development",
     entry: {
-      app: path.resolve(cwd, 'examples/HelloWorld/index')
+      app: path.resolve(cwd, 'examples/Popup/index')
     },
     output: {
       path: path.resolve(cwd, 'dist'),

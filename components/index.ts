@@ -1,2 +1,2 @@
 export { HelloWorld } from './HelloWorld';
-export { Hello } from './Hello';
+export { Popup } from './Popup';
