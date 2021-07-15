@@ -3,20 +3,21 @@ const path = require('path');
 const moduleRules = require('./loaders');
 const plugins = require('./plugins');
 const nodeExternals = require('webpack-node-externals');
+const TerserPlugin = require('terser-webpack-plugin');
 const cwd = process.cwd();
-const env = process.env.NODE_ENV;
-const isProd = env === 'production';
 
 module.exports = () => {
   return {
     devtool: '#source-map',
     mode: "production",
     entry: {
-      "tinyuen-ui": path.resolve(cwd, 'components/index')
+      "tinyuen-ui": path.resolve(cwd, 'components/index'),
+      "tinyuen-ui.min": path.resolve(cwd, 'components/index'),
+      "tinyuen-ui-style": path.resolve(cwd, 'components/styles/entry')
     },
     output: {
       path: path.resolve(cwd, 'dist'),
-      filename: isProd ? '[name].min.js' : '[name].js',
+      filename: '[name].js',
       library: 'tinyuenUI',
       libraryExport: 'umd',
       publicPath: '/'
@@ -29,8 +30,15 @@ module.exports = () => {
       Object.assign({ react: 'react', 'react-dom': 'react-dom' }, {}),
       nodeExternals()
     ],
-    // close optimization for Development
-    optimization: !isProd ? { minimize: false } : {},
+    optimization: {
+      minimize: true,
+      minimizer: [
+        // open optimization only for '.min.js'
+        new TerserPlugin({
+          include: /\.min/
+        })
+      ]
+    },
     performance: {
       hints: false,
     },

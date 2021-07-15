@@ -68,10 +68,13 @@ module.exports = (isDev) => {
     },
     {
       test: /\.scss$/,
+      exclude: /node_modules/,
       use: genSassLoaders(isDev),
+      sideEffects: true,
     },
     {
       test: /\.css$/,
+      exclude: /node_modules/,
       use: genCssLoaders(isDev),
     },
     {

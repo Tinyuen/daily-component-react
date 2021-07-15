@@ -53,4 +53,4 @@ gulp.task('compile-scss-dist', () => {
     .pipe(gulp.dest(distDir));
 });
 
-gulp.task('compile', gulp.series(gulp.parallel('replace-index-js', 'compile-scss', 'compile-scss-dist')));
+gulp.task('compile', gulp.series(gulp.parallel('replace-index-js', 'compile-scss')));
